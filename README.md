@@ -129,7 +129,7 @@ We are always open to [your feedback](https://github.com/facebookincubator/creat
 After creation, your project should look like this:
 
 ```
-my-app/
+Order-confirmation/
   README.md
   node_modules/
   package.json
