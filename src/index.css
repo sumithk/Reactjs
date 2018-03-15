@@ -39,8 +39,45 @@ body {
 .text-blue {
 	color: #458ef5;
 }
+.text-center {
+	text-align: center;
+}
+.text-small {
+	font-size: 12px;
+}
+.text-medium {
+	font-size: 14px;
+}
+.text-large {
+	font-size: 16px;
+}
 /*----------- Color Pallete -----------*/
+.container {
 
+	background: #f7f7f7;
+}
+.header {
+	max-width: 1200px;
+	margin:0 auto;
+	padding:12px;
+	font-size: 14px;
+	display: grid;
+	grid-template-columns: 60% 10% 10% 10% 10%;
+	align-items: center;
+}
+.header .ty-icon {
+	display: block;
+}
+.footer {
+	color: #4a4a4a;
+	font-size: 14px;
+	border-top: 1px solid #dfdfdf;
+	height: 148px;
+}
+
+body {
+	margin:0;
+}
 
 /*----------- Success Animated Icon -----------*/
 @-webkit-keyframes scaleAnimation {
@@ -174,13 +211,14 @@ body {
 .fl-rt {
 	float: right;
 }
-.Thankyou {
+.content {
 	background: #fff;
 	width: 660px;
 	margin: 0 auto;
 	text-align: center;
+  padding: 15px 0;
 }
-.Thankyou textarea {
+.content textarea {
 	width: 430px;
 	padding: 5px;
 }
@@ -201,6 +239,16 @@ body {
 	border: 1px solid #dedede;
 	background: #fff;
 	color: #666;
+}
+.btn-primary {
+	border: 1px solid #84c225;
+	background: #84c225;
+	color: #fff;
+	padding:16px;
+}
+.btn-ripple-submit {
+	margin: 5px auto;
+	width: 100%;
 }
 
 .form-control {
@@ -228,10 +276,15 @@ body {
 	vertical-align: super;
 	margin-right: 10px;
 }
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto;
+}
 .grid-container2 {
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px;
+	align-items: center;
 }
 .grid-container3 {
   display: grid;
@@ -240,7 +293,7 @@ body {
 }
 .grid-container4 {
   display: grid;
-  grid-template-columns: 140px 80px auto 100px;
+  grid-template-columns: 180px 80px auto 100px;
   padding: 10px;
 }
 .grid-item {
@@ -268,6 +321,10 @@ body {
 }
 .shipmentinfo {
 	align-items: center;
+}
+.shipmentinfo .ty-icon,
+.deliveryinfo .ty-icon {
+	margin-right: 10px;
 }
 .shipmentinfo .shipment {
 	font-size: 12px;
@@ -319,6 +376,11 @@ body {
 .card p {
 	font-size: 12px;
 	margin: 5px;
+}
+#assistance .ty-icon:before {
+	vertical-align: bottom;
+  margin-right: 10px;
+	font-size: 9px;
 }
 
 @-webkit-keyframes fadeIn {

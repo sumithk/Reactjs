@@ -2,9 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './fonts.css';
+import './icon.css';
 import Ripples from 'react-ripples'
 //import { Component } from "react";
 var Rating = require('react-rating');
+
+//Render Header
+function Header() {
+  return (
+    <div className="header">
+      <div><i className="ty-icon ty-icon-bigbasket"></i></div>
+      <div className="text-center"><i className="ty-icon ty-icon-quality"></i>Quality</div>
+      <div className="text-center"><i className="ty-icon ty-icon-ontime"></i>On time guarantee</div>
+      <div className="text-center"><i className="ty-icon ty-icon-free-delivery"></i>Free delivery</div>
+      <div className="text-center"><i className="ty-icon ty-icon-return"></i>Return policy</div>
+    </div>
+  );
+};
+ReactDOM.render(
+  <Header/>,
+  document.getElementById('header')
+);
+//Render Header
 
 //SuccessIcon Animated
 function SuccessIcon() {
@@ -44,7 +63,7 @@ class FeedbackForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
+    alert('Feedback: ' + this.state.value);
     event.preventDefault();
   }
 
@@ -110,7 +129,7 @@ const orderdetails = {
     result: {
         delivery_adddress: '# 5. 1st floor 2nd cross j.j churchRoad near j.j church Ejipura Bangalore - 560047',
         shipments:{
-            // icon: 'bike',
+            icon: 'bike',
             slot_type: 'Standard',
             total_items_in_shipment:45,
             slot_time:'Today within next 90 mins',
@@ -138,7 +157,7 @@ const orderdetails = {
 function Deliveryinfo(props) {
   return (
     <div className="pannel-item grid-container2 deliveryinfo">
-      <div className="grid-item title">Delivery Address</div>
+      <div className="grid-item title"><i className="ty-icon ty-icon-location"></i>Delivery Address</div>
       <div className="grid-item address">{props.result.delivery_adddress}</div>
     </div>
   );
@@ -149,8 +168,9 @@ function Deliveryinfo(props) {
 function Shipmentinfo(props) {
   return (
     <div className="pannel-item grid-container4 shipmentinfo">
-      <div className="grid-item shipment">Shipment 1: {props.shipments.slot_type}</div>
+      <div className="grid-item shipment"><i className={"ty-icon " + (props.shipments.icon=='successfull' ? 'ty-icon-exp-del' : 'ty-icon-std-delivery')}></i>Shipment 1: {props.shipments.slot_type}</div>
       <div className="grid-item items">
+
           <div>{props.shipments.total_items_in_shipment}</div>
           <div>Items</div>
       </div>
@@ -182,7 +202,11 @@ function Orderinfo(props) {
         <tbody>
           <tr>
               <td>Payment Status : </td>
-              <td className={"txt-bold text-left " + (props.order.payment_status=='successfull' ? 'text-light' : 'text-primary')}>{props.order.payment_status}</td>
+              <td className={"txt-bold text-left " + (props.order.payment_status=='successfull' ? 'text-light' : 'text-primary')}>
+              {props.order.payment_status}
+              <i className={"ty-icon " + (props.order.payment_status==='successfull' : 'ty-icon-info-orange-lined')}></i>
+              <i className={"ty-icon " + (props.order.payment_status==='failed' : 'ty-icon-info-red-lined')}></i>
+              </td>
           </tr>
           <tr>
               <td>Order Amount :</td>
@@ -234,18 +258,18 @@ function Assistcard(props) {
   return (
     <div className="grid-container3">
         <div className="grid-item card">
-          <div className="text-blue">PAY NOW</div>
-          <p className="text-meduim">Pay online for this order</p>
+          <div className="text-blue txt-bold text-medium"><i className="ty-icon ty-icon-voucher"></i>PAY NOW</div>
+          <p className="text-meduim txt-bold">Pay online for this order</p>
           <p className="text-light">Complete order payment for cash-free delivery</p>
         </div>
         <div className="grid-item card">
-          <div className="text-blue">PAY NOW</div>
-          <p className="text-meduim">Pay online for this order</p>
+          <div className="text-blue txt-bold text-medium"><i className="ty-icon ty-icon-add-item"></i>FORGOT ITEM?</div>
+          <p className="text-meduim txt-bold">Pay online for this order</p>
           <p className="text-light">Complete order payment for cash-free delivery</p>
         </div>
         <div className="grid-item card">
-          <div className="text-blue">PAY NOW</div>
-          <p className="text-meduim">Pay online for this order</p>
+          <div className="text-blue txt-bold text-medium"><i className="ty-icon ty-icon-help"></i>HELP</div>
+          <p className="text-meduim txt-bold">Pay online for this order</p>
           <p className="text-light">Complete order payment for cash-free delivery</p>
         </div>
     </div>
@@ -256,3 +280,30 @@ ReactDOM.render(
   document.getElementById('assistance')
 );
 //Assistance section
+
+//Assistance section
+function Continuebtn(props) {
+  return (
+    <Ripples color="green">
+      <button className="btn btn-primary">Continue Shopping</button>
+    </Ripples>
+  );
+}
+ReactDOM.render(
+  <Continuebtn/>,
+  document.getElementById('continue')
+);
+
+//Render Footer
+function Footer() {
+  return (
+    <div className="footer">
+      <p className="text-center">For Futher enquiries: Call: 1860123100 | E-mail: customerservice@bigbasket.com</p>
+    </div>
+  );
+};
+ReactDOM.render(
+  <Footer/>,
+  document.getElementById('footer')
+);
+//Render Footer
