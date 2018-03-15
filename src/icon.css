@@ -1,0 +1,200 @@
+.ty-icon {
+    font-size: 10px;
+}
+
+.ty-icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("./ty.svg");
+    background-repeat: no-repeat;
+    background-size: 61em 50.4em;
+}
+
+
+
+  .ty-icon.ty-icon-add-item:before {
+      background-position: 0em 0em;
+      width: 3em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-arrow-right:before {
+      background-position: -3em -3em;
+      width: 0.8em;
+      height: 1.5em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-bigbasket:before {
+      background-position: -3.8em -4.5em;
+      width: 15.8em;
+      height: 6.4em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-close:before {
+      background-position: -19.6em -10.9em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-exp-del:before {
+      background-position: -22em -13.3em;
+      width: 2.6em;
+      height: 1.4em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-free-delivery:before {
+      background-position: -24.6em -14.7em;
+      width: 3.4em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-help:before {
+      background-position: -28em -17.7em;
+      width: 3em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-info-active-filled:before {
+      background-position: -31em -20.7em;
+      width: 1.2em;
+      height: 1.2em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-info-orange-filled:before {
+      background-position: -32.2em -21.9em;
+      width: 1.2em;
+      height: 1.2em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-info-orange-lined:before {
+      background-position: -33.4em -23.1em;
+      width: 1.2em;
+      height: 1.2em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-info-red-lined:before {
+      background-position: -34.6em -24.3em;
+      width: 1.2em;
+      height: 1.2em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-location:before {
+      background-position: -35.8em -25.5em;
+      width: 1.3em;
+      height: 1.6em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-ontime:before {
+      background-position: -37.1em -27.1em;
+      width: 3em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-pay:before {
+      background-position: -40.1em -30.1em;
+      width: 3em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-quality:before {
+      background-position: -43.1em -33.1em;
+      width: 2.8em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-return:before {
+      background-position: -45.9em -36.1em;
+      width: 3em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-rupee-circle:before {
+      background-position: -48.9em -39.1em;
+      width: 2em;
+      height: 2em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-star-filled:before {
+      background-position: -50.9em -41.1em;
+      width: 2.1em;
+      height: 2em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-std-delivery:before {
+      background-position: -53em -43.1em;
+      width: 2em;
+      height: 1.3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-success-lg:before {
+      background-position: -55em -44.4em;
+      width: 3em;
+      height: 3em;
+  }
+
+
+
+
+  .ty-icon.ty-icon-voucher:before {
+      background-position: -58em -47.4em;
+      width: 3em;
+      height: 3em;
+  }
